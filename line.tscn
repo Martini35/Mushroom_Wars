@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://ds0ymsadgdqip"]
+
+[ext_resource type="Script" path="res://line.gd" id="1_rat6h"]
+[ext_resource type="PackedScene" uid="uid://cwyxqwj8nx38c" path="res://point.tscn" id="2_rocoi"]
+
+[sub_resource type="Curve" id="Curve_xcgu5"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 0.318681), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[node name="Line" type="Node2D"]
+script = ExtResource("1_rat6h")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(321, 181)
+
+[node name="Line2D" type="Line2D" parent="."]
+width_curve = SubResource("Curve_xcgu5")
+
+[node name="Point" parent="." instance=ExtResource("2_rocoi")]
+position = Vector2(148, 185)
+
+[node name="Point2" parent="." instance=ExtResource("2_rocoi")]
+position = Vector2(491, 159)
