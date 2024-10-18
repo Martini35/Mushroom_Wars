@@ -69,5 +69,5 @@ func coming_unit():
 
 
 func _on_timer_timeout():
-	coming_unit()
-	timer.wait_time = 2
+	if nation != 0:
+		coming_unit()

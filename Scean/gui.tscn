@@ -1,0 +1,195 @@
+[gd_scene load_steps=20 format=3 uid="uid://j5rff0t32jii"]
+
+[ext_resource type="Texture2D" uid="uid://bxqt4xu5l1iit" path="res://GUI.png" id="1_n35qf"]
+[ext_resource type="Script" path="res://Script/gui.gd" id="1_r62wn"]
+[ext_resource type="FontFile" uid="uid://bdd6ax81ymixm" path="res://NormalFont.ttf" id="2_doid7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x01ql"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c46co"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f1a7w"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jtots"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h14kg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_anlvn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fqfq0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b5leo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ms6bd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gu03e"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2vphv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_557mw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1to11"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k6rpk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qg6i1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d4kpc"]
+
+[node name="GUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_r62wn")
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 322.0
+offset_top = 331.0
+offset_right = 371.0
+offset_bottom = 353.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_x01ql")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_c46co")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_f1a7w")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jtots")
+
+[node name="Label4" type="Label" parent="."]
+layout_mode = 0
+offset_left = 381.0
+offset_top = 330.0
+offset_right = 466.0
+offset_bottom = 374.0
+scale = Vector2(0.5, 0.5)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("2_doid7")
+theme_override_font_sizes/font_size = 32
+text = "25%"
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 220.0
+offset_top = 330.0
+offset_right = 305.0
+offset_bottom = 374.0
+scale = Vector2(0.5, 0.5)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("2_doid7")
+theme_override_font_sizes/font_size = 32
+text = "100%"
+horizontal_alignment = 1
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+offset_left = 216.0
+offset_top = 331.0
+offset_right = 266.0
+offset_bottom = 353.0
+texture = ExtResource("1_n35qf")
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 4
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="."]
+offset_left = 269.0
+offset_top = 331.0
+offset_right = 318.0
+offset_bottom = 353.0
+texture = ExtResource("1_n35qf")
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 4
+
+[node name="NinePatchRect3" type="NinePatchRect" parent="."]
+offset_left = 322.0
+offset_top = 331.0
+offset_right = 371.0
+offset_bottom = 353.0
+texture = ExtResource("1_n35qf")
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 4
+
+[node name="NinePatchRect4" type="NinePatchRect" parent="."]
+offset_left = 377.0
+offset_top = 331.0
+offset_right = 426.0
+offset_bottom = 353.0
+texture = ExtResource("1_n35qf")
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 4
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 273.0
+offset_top = 330.0
+offset_right = 358.0
+offset_bottom = 374.0
+scale = Vector2(0.5, 0.5)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("2_doid7")
+theme_override_font_sizes/font_size = 32
+text = "75%"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 326.0
+offset_top = 330.0
+offset_right = 411.0
+offset_bottom = 374.0
+scale = Vector2(0.5, 0.5)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("2_doid7")
+theme_override_font_sizes/font_size = 32
+text = "50%"
+horizontal_alignment = 1
+
+[node name="Button1" type="Button" parent="."]
+layout_mode = 0
+offset_left = 216.0
+offset_top = 331.0
+offset_right = 265.0
+offset_bottom = 353.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_h14kg")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_anlvn")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_fqfq0")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_b5leo")
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 269.0
+offset_top = 331.0
+offset_right = 318.0
+offset_bottom = 353.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ms6bd")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_gu03e")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_2vphv")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_557mw")
+
+[node name="Button4" type="Button" parent="."]
+layout_mode = 0
+offset_left = 377.0
+offset_top = 331.0
+offset_right = 426.0
+offset_bottom = 353.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_1to11")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_k6rpk")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_qg6i1")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_d4kpc")
+
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Button1" to="." method="_on_button_1_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]

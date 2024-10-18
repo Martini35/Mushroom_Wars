@@ -12,6 +12,7 @@ var onOurBase = false
 var natrion = 0
 var baseFriend
 var baseEnemy
+var ile
 
 func _ready():
 	linia.add_point(Vector2(0, 0), 0)
@@ -21,6 +22,8 @@ func _ready():
 	base2.changeNatrion(2)
 	
 	Global.connect("arrow", Callable(self, "_can_we"))
+	
+	ile = 1
 
 
 func _process(delta):
@@ -36,7 +39,7 @@ func _process(delta):
 		
 	if Input.is_action_just_released("left_mouse"):
 		if (natrion == 0 || natrion == 2 || natrion == 1) && onOurBase:
-			baseFriend.spawnUnit(20, baseEnemy.position, 1, baseEnemy)
+			baseFriend.spawnUnit(baseFriend.unitInBase * ile, baseEnemy.position, 1, baseEnemy)
 		linia.set_point_position(0, Vector2(0, 0))
 		linia.set_point_position(1, Vector2(0, 0))
 		pierwszyKlik = true
@@ -51,3 +54,7 @@ func _can_we(can, nat, be):
 	natrion = nat
 	baseEnemy = be
 
+
+
+func _on_gui_zmina_ilosci(ilee):
+	ile = ilee
