@@ -1,0 +1,89 @@
+[gd_scene load_steps=8 format=3 uid="uid://b4wachrtpudkj"]
+
+[ext_resource type="Script" path="res://Script/unit.gd" id="1_skcae"]
+[ext_resource type="Texture2D" uid="uid://bo58hkqu1diha" path="res://unit.png" id="2_5w5ha"]
+[ext_resource type="Texture2D" uid="uid://b53ajcl08k3dd" path="res://unit_back.png" id="3_dhbjj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0pnxh"]
+size = Vector2(5, 9)
+
+[sub_resource type="Animation" id="Animation_x06up"]
+resource_name = "walk"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Body:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-1, -8), Vector2(-1, -9), Vector2(-1, -8), Vector2(-1, -9), Vector2(-1, -9), Vector2(-1, -9), Vector2(-1, -9), Vector2(-1, -8)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Body:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, -0.261799, 0.0, 0.261799, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_74ov5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Body:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1, -8)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Body:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lv86o"]
+_data = {
+"RESET": SubResource("Animation_74ov5"),
+"walk": SubResource("Animation_x06up")
+}
+
+[node name="Unit" type="CharacterBody2D"]
+z_index = -1
+script = ExtResource("1_skcae")
+
+[node name="Body" type="Sprite2D" parent="."]
+position = Vector2(-1, -8)
+texture = ExtResource("2_5w5ha")
+
+[node name="Head" type="Sprite2D" parent="Body"]
+texture = ExtResource("3_dhbjj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -5.5)
+shape = SubResource("RectangleShape2D_0pnxh")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_lv86o")
+}

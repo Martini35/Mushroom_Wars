@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://ds0ymsadgdqip"]
+
+[ext_resource type="Script" path="res://Script/line.gd" id="1_c6ioy"]
+[ext_resource type="PackedScene" uid="uid://cwyxqwj8nx38c" path="res://Scean/point.tscn" id="2_skhor"]
+
+[sub_resource type="Curve" id="Curve_xcgu5"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 0.318681), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[node name="Line" type="Node2D"]
+script = ExtResource("1_c6ioy")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(321, 181)
+
+[node name="Line2D" type="Line2D" parent="."]
+width_curve = SubResource("Curve_xcgu5")
+
+[node name="Point" parent="." instance=ExtResource("2_skhor")]
+position = Vector2(156, 243)
+
+[node name="Point2" parent="." instance=ExtResource("2_skhor")]
+position = Vector2(491, 159)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 28.0
+offset_top = 27.0
+offset_right = 201.0
+offset_bottom = 101.0
+
+[node name="Point3" parent="." instance=ExtResource("2_skhor")]
+position = Vector2(397, 93)
+
+[node name="Point4" parent="." instance=ExtResource("2_skhor")]
+position = Vector2(302, 175)
